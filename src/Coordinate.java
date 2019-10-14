@@ -4,16 +4,14 @@ public class Coordinate {
     public static void main(String[] args) {
 
         Scanner scanner  = new Scanner(System.in);
-
-        System.out.println("Podaj X");
-        int x = scanner.nextInt();
-        System.out.println("Podaj Y");
-        int y = scanner.nextInt();
-
         Point point = new Point();
+        System.out.println("Podaj X");
+        point.setX(scanner.nextInt());
 
-        String result = ("Punkt"  + "(" + x + "," + y + ")" + " leży w " + point.quarter(x, y) + "ćwiartce układu współrzędnych.");
+        System.out.println("Podaj Y");
+        point.setY(scanner.nextInt());
+        scanner.close();
 
-        System.out.println(result);
+        System.out.println(point.result());
     }
 }
